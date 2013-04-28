@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+
+header{
+	color:black;
+	font-size: 14px;
+}
+a{ 
+    display : none; 
+}
+
+table{
+	border-collapse:collapse;
+}
+
+td,th{
+	padding: 5px;
+}
+
+#menu, footer, header,h1,.tabContainerForGuestPage,.tabContainer{ 
+  display : none; 
+}
+
+#tabContent border, #contentHolder border {display: none;}
+
+.sisu >img {display:all;max-width: 100%; max-height: 50%;}
+
+#tabelmenu{display:none;}
+
+#cart{
+	width:100%;
+	heigth:100%;
+}

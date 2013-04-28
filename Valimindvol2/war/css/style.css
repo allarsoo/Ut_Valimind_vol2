@@ -1,0 +1,147 @@
+/*Üldised asjad*/
+
+{
+	margin: 0px;
+	padding: 0px;
+
+}
+.sisuTaust{
+	background: rgb(76, 150, 247);
+	background: -moz-linear-gradient(left, rgba(76, 150, 247, 1) 1%,
+		rgba(226, 226, 226, 1) 100% );
+	background: -webkit-gradient(linear, left top, right top, color-stop(1%, rgba(76,
+		150, 247, 1) ), color-stop(100%, rgba(226, 226, 226, 1) ) );
+	background: -webkit-linear-gradient(left, rgba(76, 150, 247, 1) 1%,
+		rgba(226, 226, 226, 1) 100% );
+	background: -o-linear-gradient(left, rgba(76, 150, 247, 1) 1%,
+		rgba(226, 226, 226, 1) 100% );
+	background: -ms-linear-gradient(left, rgba(76, 150, 247, 1) 1%,
+		rgba(226, 226, 226, 1) 100% );
+	background: linear-gradient(to right, rgba(76, 150, 247, 1) 1%,
+		rgba(226, 226, 226, 1) 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#4c96f7',
+		endColorstr='#e2e2e2', GradientType=1 );
+}
+
+
+
+#menu {
+	/*border:1px solid red;*/
+	margin-bottom: 15%;
+	text-align: center;}
+	
+#menu li{
+	display:inline-block;
+	list-style:none;
+	padding: 5px;
+	font: bold 14px tahoma;	
+}
+
+.sisu {
+	/*border:1px solid orange;*/
+	margin-bottom: 10%;
+}
+.sisu > p {
+text-align: center;
+	}
+.sisu > #piirkond #erakond #kandidaat {
+	padding: 1em;}	
+
+.sisu >img {max-width: 100%; max-height: 50%;}
+fieldset {display: inline-block;
+	vertical-align: middle;
+	text-align: right;}
+
+.tulemus {
+	border: 5px solid green;
+	text-align:center;
+	margin-left:auto; 
+   margin-right:auto;
+	}
+	
+#otsus {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	background-color:#9dce2c;
+	border:3px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 30px;
+	text-decoration:none;
+	text-align: center;
+	top: 50%;
+ 
+}
+#otsus1 {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	background-color:#9dce2c;
+	border:3px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 30px;
+	text-decoration:none;
+	text-align: center;
+	top: 50%;
+ 
+}
+#otsus2 {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	background-color:#9dce2c;
+	border:3px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 30px;
+	text-decoration:none;
+	text-align: center;
+	top: 50%;
+ 
+}
+#otsus3 {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	background-color:#9dce2c;
+	border:3px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 30px;
+	text-decoration:none;
+	text-align: center;
+	top: 50%;
+ 
+}
+#otsus2{display:none;}
+#otsus:hover{
+	text-decoration:underline;
+	color:blue;
+}
+
+footer{
+	/*border:1px solid green;*/
+	margin-top: 15%;
+	clear:both;
+	text-align:center;
+	top: 80%;	
+	}
+#chart{
+	max-width: 65%;
+	max-height: 100%;
+}
+#chart p{
+	text-aligin:center;
+}
+
+	
