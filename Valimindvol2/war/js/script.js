@@ -9,8 +9,6 @@ $(document).ready(function(){
 		'Kandideeri'	: 'kandideeri.html',
 		'Nimekiri' : 'listOfCanditates.html',
 		'Hääleta' : 'votepage.html',
-		
-		
 	}
 	
 	/* The available colors for the tabs: */

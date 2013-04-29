@@ -13,7 +13,7 @@
 		"id" : "1234567891",
 		"region" : {
 			"id" : "LA",
-			"name" : "Läänemaa"
+			"name" : "LÃ¤Ã¤nemaa"
 		},
 		"person" : {
 			"id" : "37907034621",
@@ -27,13 +27,13 @@
 		},
 		"person" : {
 			"id" : "37907034622",
-			"name" : "Gerhard Gätegõverdus"
+			"name" : "Gerhard Gï¿½tegï¿½verdus"
 		}
 	}, {
 		"id" : "1234567893",
 		"region" : {
 			"id" : "JO",
-			"name" : "Jõgevamaa"
+			"name" : "JÃµgevamaa"
 		},
 		"person" : {
 			"id" : "37907034623",
@@ -43,7 +43,7 @@
 		"id" : "1234567894",
 		"region" : {
 			"id" : "PO",
-			"name" : "Põlvamaa"
+			"name" : "PÃµlvamaa"
 		},
 		"person" : {
 			"id" : "37907034624",
@@ -53,7 +53,7 @@
 		"id" : "1234567855",
 		"region" : {
 			"id" : "PO",
-			"name" : "Põlvamaa"
+			"name" : "PÃµlvamaa"
 		},
 		"person" : {
 			"id" : "37907034625",
@@ -63,17 +63,17 @@
 		"id" : "1234567856",
 		"region" : {
 			"id" : "PO",
-			"name" : "Põlvamaa"
+			"name" : "PÃµlvamaa"
 		},
 		"person" : {
 			"id" : "37907034626",
-			"name" : "Kõikme Kannatameära"
+			"name" : "KÃµikme KannatameÃ¤ra"
 		}
 	}, {
 		"id" : "1234567857",
 		"region" : {
 			"id" : "PO",
-			"name" : "Põlvamaa"
+			"name" : "PÃµlvamaa"
 		},
 		"person" : {
 			"id" : "37907034627",
