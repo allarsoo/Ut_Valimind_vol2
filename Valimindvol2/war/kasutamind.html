@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<title>Valimind</title>
+</head>
+<body class="sisuTaust">
+  <div id="big_wrapper">
+	<header id="top_header"><p>****Antud rakendus ei ole mõeldud kasutamiseks reaalsetel valimistel***</p></header>
+	
+	<nav id="mainMenu">
+		<ul class="nav current-about">
+			<li class="kodu"><a href="#">Kodu</a></li>
+			<li class="kandidaadid"><a href="#">Kandidaadid</a></li>
+			<li class="statistika"><a href="#">Statistika</a></li>
+			<li class="tulemused"><a href="#">Tulemused</a></li>
+			<li class="kandideeri"><a href="#">Kandideeri</a></li>
+			<li class="logi_sisse"><a href="index.html">Välju</a></li>	
+		</ul>	
+	</nav>
+<div id="content">
+	
+<div id="vote">
+		<form action="VotingServlet" method="post">	
+		<div id="piirkond" >
+			<select name="piirkond">
+  			<option value="Põlvamaa">Tartumaa</option>
+  			<!--option value="Harjumaa">Harjumaa</option>
+  			<option value="Valgamaa">Valgamaa</option-->
+  			</select>
+  		</div>
+  		
+  		<div id = "kandideeri">
+		<form action ="kandideeri" method="post">
+ 		<fieldset>
+  		<legend>Kandidatuuri esitamine</legend>
+  		Eesnimi: <input id="nimi" name="nimi" type="text"><br><p id="nimiviga"></p>
+  		Perenimi: <input id="perenimi" name="perenimi" type="text"><br><p id="perenimiviga"></p>
+  		Sünnikuupäev: <input id="Bday" name="Bday" type="text"><br><p id="kuuviga"></p> 
+  		Piirkond: <select id="piirkond" name="piirkond">
+  			<option value="Tartumaa">Tartumaa</option>
+  			<option value="Harjumaa">Harjumaa</option>
+  			<option value="Valgamaa">Valgamaa</option>
+  		</select>
+  		Erakond: <select id="erakond" name="erakond">
+  			<option value="IRLl">IRL</option>
+  			<option value="Reformierakond">Reformierakond</option>
+  			<option value="Üksikandidaat">Üksikkandidaadid</option>
+  		</select>  		
+ 		</fieldset>
+		<input type="button" value="Kandideeri" onclick="KontrolliSisend()"/>
+		</form>
+	</div><hr>
+	
+	</div>
+	</div>
+	<footer>
+		<p>***Rakenduses realiseertiud e-valimiste näide on realiseertud tehnoloogiate praktiseerimise eesmärgil ning ei ole mõeldud reaalseste e-valimiste korraldamiseks.Kokkulangevused reaalse e-valimiste protsessiga on juhuslikud***</p>
+		<p>Copyright ut-valimind 2013</p>
+	</footer>
+</div>	
+</body>
+</html>
