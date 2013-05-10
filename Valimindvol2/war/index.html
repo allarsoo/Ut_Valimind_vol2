@@ -13,20 +13,20 @@
 	
 	<nav id="mainMenu">
 		<ul class="nav current-about">
-			<li class="kodu"><a href="#">Kodu</a></li>
-			<li class="kandidaadid"><a href="#">Kandidaadid</a></li>
-			<li class="statistika"><a href="#">Statistika</a></li>
-			<li class="tulemused"><a href="#">Tulemused</a></li>
+			<li class="kodu"><a name="resource" id="resource1" href="#">Kodu</a></li>
+			<li class="kandidaadid"><a name="resource" id ="resource2" href="#">Kandidaadid</a></li>
+			<li class="statistika"><a name="resource" id="resource3" href="#">Statistika</a></li>
+			<li class="tulemused"><a name="resource" id="resource4" href="#">Tulemused</a></li>
 			<li class="logi_sisse"><a href="kasutamind.html">Sisene</a></li>	
 		</ul>	
 	</nav>
 		
 	<div id="content">
-		<div id="tervitus">
+		<div class="resource" id="resource1"><!-- Tervitus -->
 			<p>Tere tulemast poliitikahuviline. Olete sattunud 2013. aasta e-valimiste lehele. Siin saate te oma kodanikukohust täita.</p>
 		</div><hr>
 	
-		<div id ="kandidaadid">
+		<div class="resource" id ="resource2"><!-- Tulemused -->
 			<div id="table_div">
 			<form action="kandideeri"  method="GET" >
 							<br> <input type="button" value="Kuva kandidaadid" 
@@ -36,7 +36,7 @@
 				
 		</div><hr>
 	
-		<div id="statistika">
+		<div class="resource" id="resource3"><!-- Kandidaadid -->
 			<div class="sisu">
 			<select id="tabelmenu" onchange="valitabel()">
   				<option value="pie">Koguriigis</option>
@@ -46,7 +46,7 @@
 		</div>
 		</div><hr>
 	
-		<div id="tulemused">
+		<div class="resource" id="resource4"><!-- Tulemused -->
 		
 			<div class="sisu">
 				<img src="img/kontuurkaart.jpg" width=50%/>
@@ -61,8 +61,8 @@
 			</div>
 		</div><hr>
 	
-		<div id="logisisse"><a href="kasutamind.html">link</a></div><hr>
 	</div>
+	
 	<footer>
 		<p>***Rakenduses realiseertiud e-valimiste näide on realiseertud tehnoloogiate praktiseerimise eesmärgil ning ei ole mõeldud reaalseste e-valimiste korraldamiseks.Kokkulangevused reaalse e-valimiste protsessiga on juhuslikud***</p>
 		<p>Copyright ut-valimind 2013</p>
