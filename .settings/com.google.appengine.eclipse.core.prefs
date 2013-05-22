@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+gaeDatanucleusEnabled=false
+gaeIsEclipseDefaultInstPath=true
+googleCloudSqlEnabled=false
+localDevMySqlEnabled=true

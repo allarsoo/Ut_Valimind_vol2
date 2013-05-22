@@ -96,14 +96,23 @@ body{
 /* sisu */
 #content{
 	float: left;
-	max-width: 1000px;
-	min-width: 300px;
+	max-width: 100%;
+	min-width: 70%;
 	background-color:#FFFBCC;
 	border: 3px solid blue;
 	margin: 10px 0px 10px;
 	pading: 10px;
 	/*font:bold 14px Tahoma;*/
 	
+}
+
+/* Map*/
+#googleMap{
+	margin-left: 1em;
+	height: 450px;
+	width: 100%;
+	max-width: 700px;
+	float: left;
 }
 
 /*Jalus*/
