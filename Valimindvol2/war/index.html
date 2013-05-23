@@ -4,8 +4,9 @@
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style.css"></link>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script type='text/javascript' src="https://www.google.com/jsapi"></script>
 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAHQDKvYyMok1Jdo5c_nNyt9HY8V7Kyrec&sensor=false"></script>
+<script type="text/javascript" src="js/script.js"></script>
 <title>Valimind</title>
 </head>
 <body  class="sisuTaust">
@@ -50,7 +51,7 @@
 		      // The same caveats as above apply to the FB.login() call here.
 		      FB.login();
 		      window.open("kasutmind.html", _self);
-		      
+
 		    }
 		  });
 		  };
@@ -75,25 +76,25 @@
 	</script>
 	<div id="big_wrapper">
 	<header id="top_header"><p>****Antud rakendus ei ole mõeldud kasutamiseks reaalsetel valimistel***</p></header>
-	
+
 	<nav id="mainMenu">
 		<ul class="nav current-about">
 			<li class="kodu"><a name="resource" id="resource1" href="#">Kodu</a></li>
 			<li class="kandidaadid"><a name="resource" id ="resource2" href="#">Kandidaadid</a></li>
 			<li class="statistika"><a name="resource" id="resource3" href="#">Statistika</a></li>
 			<li class="tulemused"><a name="resource" id="resource4" href="#">Tulemused</a></li>
-			<li class="tulemusedKaardil"><a name="resource" id="resource5" href="#Kaardil">TulemusedKaardil</a></li>
+			<li class="tulemusedKaardil"><a name="resource" id="resource5" href="#Kaardil">Tulemused kaardil</a></li>
 			<li class="logi_sisse"><fb:login-button autologoutlink="true" onlogin="OnRequestPermission();"></fb:login-button></li>
 		</ul>	
 	</nav>
-		
+
 	<div id="content">
 		<div class="resource" id="resource1"><!-- Tervitus -->
 			<p></p>
-			<br></br>
+			<br>
 			<p>Tere tulemast poliitikahuviline. Olete sattunud 2013. aasta e-valimiste lehele. Siin saate te oma kodanikukohust täita.</p>
-		</div><hr>
-	
+		</div>
+
 		<div class="resource" id ="resource2"><!-- Kandidaadid -->
 			<form action="AllCandidates"  method="GET" >
 							<br> <input type="button" value="Kuva kandidaadid" 
@@ -109,10 +110,10 @@
 			<input id="otsus3" type="submit" value="Otsi">
 	</form>
 			<div id="table_div">
-			
+
 			</div><!-- erakonnad -->
-		</div><hr>
-	
+		</div>
+
 		<div class="resource" id="resource3"><!-- Stat -->
 			<div class="sisu">
 			<form action="StatisticByParty" method="get">
@@ -126,30 +127,30 @@
 			<div id="table_div3"> 
 			</div>
 		</div>
-		</div><hr>
-	
+		</div>
+
 		<div class="resource" id="resource4"><!-- Tulemused -->
-		
+
 			<div class="sisu">
-			
-		
+
+
 			<form action="StatisticByCountry" method="get">
 				<input id="otsus" type="button" onclick="drawStatisticByCountry()" value="Kuva tulemused"/>
 			</form>
-		
+
 			<div id="table_div1">
 			</div>		
 			</div>
-		</div><hr>
+		</div>
 		<div class="resource" id="resource5"> <!--  Google Map here -->
 			<div class="sisu">
 				<div id=googleMap>
 				</div>
 			</div>
 		</div>
-	
+
 	</div>
-	
+
 	<footer>
 		<p>***Rakenduses realiseertiud e-valimiste näide on realiseertud tehnoloogiate praktiseerimise eesmärgil ning ei ole mõeldud reaalseste e-valimiste korraldamiseks.Kokkulangevused reaalse e-valimiste protsessiga on juhuslikud***</p>
 		<p>Copyright ut-valimind 2013</p>

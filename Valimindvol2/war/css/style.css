@@ -48,7 +48,6 @@ header, section footer, nav {
 }
 
 body {
-	/*width:100%;*/
 	text-align:center;
 	background: rgb(76, 150, 247);
 	background: -moz-linear-gradient(left, rgba(76, 150, 247, 1) 1%,
@@ -67,21 +66,21 @@ body {
 		endColorstr='#e2e2e2', GradientType=1 );
 }
 
-/*kogu leht*/
+
 #big_wrapper{
 	/*max-width: 1000px;*/
 	margin: 20px auto;
 	border: 1px solid red;
 	width:1000px;
 	font:bold 14px Tahoma;
-	
+
 }
 #top_header{
 	padding: 10px;
 	border: 2px solid green;
 }
 
-/*Menüü*/
+
 #mainMenu{
 	margin-top: 5px;
 	text-align:center;
@@ -101,7 +100,7 @@ body {
 	text-align:center;
 	padding:5px;
 	text-decoration:none;
-	
+
 }
 
 #mainMenu a:hover,a:active {
@@ -109,7 +108,7 @@ body {
 }
 
 
-/* sisu */
+
 #content{
 	float: left;
 	max-width: 100%;
@@ -119,10 +118,10 @@ body {
 	margin: 10px 0px 10px;
 	pading: 10px;
 	/*font:bold 14px Tahoma;*/
-	
+
 }
 
-/* Map*/
+
 #googleMap{
 	margin-left: 1em;
 	height: 450px;
@@ -131,7 +130,7 @@ body {
 	float: left;
 }
 
-/*Jalus*/
+
 footer{
 	border:1px solid green;
 	margin-top: 15%;
@@ -139,6 +138,9 @@ footer{
 	text-align:center;
 	top: 80%;	
 }
+
+footer > p{padding 10px;}
+
 #otsus3 {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
 	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
@@ -187,5 +189,48 @@ footer{
 	top: 50%;
  
 }
-	
-footer > p{pading 10px;}
+#voter{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	background-color:#9dce2c;
+	border:3px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 30px;
+	text-decoration:none;
+	text-align: center;
+	top: 50%;
+}
+#n2ita{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	background-color:#9dce2c;
+	border:3px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 30px;
+	text-decoration:none;
+	text-align: center;
+	top: 50%;
+}
+#byName{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	background-color:#9dce2c;
+	border:3px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial Black;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 30px;
+	text-decoration:none;
+	text-align: center;
+	top: 50%;
+}

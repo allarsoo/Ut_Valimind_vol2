@@ -4,33 +4,34 @@
 <meta charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style.css"></link>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type='text/javascript' src="https://www.google.com/jsapi"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAHQDKvYyMok1Jdo5c_nNyt9HY8V7Kyrec&sensor=false"></script>
 <script type="text/javascript" src="js/script.js"></script>
-<title>Valimind</title>
+<title>Valimind2</title>
 </head>
 <body class="sisuTaust">
   <div id="big_wrapper">
 	<header id="top_header"><p>****Antud rakendus ei ole mõeldud kasutamiseks reaalsetel valimistel***</p></header>
-	
 	<nav id="mainMenu">
 		<ul class="nav current-about">
-			<li class="kodu"><a href="#kodu">Kodu</a></li>
-			<li class="kandidaadid"><a href="#kandidaadid">Kandidaadid</a></li>
-			<li class="statistika"><a href="#statistika">Statistika</a></li>
-			<li class="tulemused"><a href="#tulemused">Tulemused</a></li>
-			<li class="kandideeri"><a href="#kandideeri">Kandideeri</a></li>
-			<li class="hääleta"><a href="#hääleta">Hääleta</a></li>
-			<li class="tulemusedKaardil"><a href="#tulemused_kaardil">Tulemused kaardil</a></li>
-			<li class="logi_sisse"><a href="index.html">Välju</a></li>	
+			<li class="kodu"><a name="resource" id="resource0" href="#">Kodu</a></li>
+			<li class="kandidaadid"><a name="resource" id ="resource1" href="#">Kandidaadid</a></li>
+			<li class="statistika"><a name="resource" id="resource2" href="#">Statistika</a></li>
+			<li class="tulemused"><a name="resource" id="resource3" href="#">Tulemused</a></li>
+			<li class="kandideeri"><a name="resource" id="resource4" href="#">Kandideeri</a></li>
+			<li class="hääleta"><a name="resource" id="resource5" href="#">Hääleta</a></li>
+			<li class="tulemusedKaardil"><a name="resource" id="resource6" href="#">Tulemused kaardil</a></li>
+			<li class="exit"><a href="index.html">Välju</a></li>	
 		</ul>	
 	</nav>
 <div id="content">
-		<div class="kodu" id="kodu"><!-- Tervitus -->
+		<div class="resource" id="resource0"><!-- Tervitus -->
 			<p></p>
 			<br>
 			<p>Tere tulemast poliitikahuviline. Olete sattunud 2013. aasta e-valimiste lehele. Siin saate te oma kodanikukohust täita.</p>
-		</div><hr>
-	
-		<div class="kandidaadid" id ="kandidaadid"><!-- Kandidaadid -->
+		</div>
+
+		<div class="resource" id="resource1"><!-- Kandidaadid -->
 			<form action="AllCandidates"  method="GET" >
 							<br> <input type="button" id="list" value="Kuva kandidaadid" 
 							onclick="drawKandidaadid()" />
@@ -38,18 +39,18 @@
 			<form action="FindByName" method="get">
 				<input id="eesnimi" name="eesnimi" type="text" value="Eesnimi">	
 				<input id="perenimi" name="perenimi" type="text" value="Perenimi">
-				<input id="otsus3" id="byName" type="submit"  value="Otsi">
+				<input  id="byName" type="submit"  value="Otsi">
 	</form>
 	<form action="FindByParty" method="get">
 			<input id="partei" name="partei" type="text" value="partei">
 			<input id="otsus3" type="submit" value="Otsi">
 	</form>
 			<div id="table_div">
-			
+
 			</div><!-- erakonnad -->
-		</div><hr>
-	
-		<div class="statistika" id="statistika"><!-- Stat -->
+		</div>
+
+		<div class="resource" id="resource2"><!-- Stat -->
 			<div class="sisu">
 			<form action="StatisticByParty" method="get">
 				<br><input type="button" value="Kuva parteide lõikes" onclick="drawStatisticByParty()">
@@ -63,21 +64,21 @@
 			</div>
 		</div>
 		</div><hr>
-	
-		<div class="tulemused" id="tulemused"><!-- Tulemused -->
-		
+
+		<div class="resource" id="resource3"><!-- Tulemused -->
+
 			<div class="sisu">
-			
-		
+
+
 			<form action="StatisticByCountry" method="get">
-				<input id="otsus" type="button" id="n2ita" onclick="drawStatisticByCountry()" value="Kuva tulemused"/>
+				<input  type="button" id="n2ita" onclick="drawStatisticByCountry()" value="Kuva tulemused"/>
 			</form>
-		
+
 			<div id="table_div1">
 			</div>		
 			</div>
-		</div><hr>
-		<div class="kandideeri" id="kandideeri"> <!--  Kandideeri -->
+		</div>
+		<div class="resource" id="resource4"> <!--  Kandideeri -->
 			<div class="sisu">
 				<form id="Lisa" action ="AddAsCandidate" method="post">
  				<fieldset>
@@ -99,8 +100,8 @@
 				<input type="button" id="kandi" value="Kandideeri" onclick="KontrolliSisend()"/>
 			</form>
 			</div>
-		</div><hr>
-		<div class="hööleta" id="hääleta">
+		</div>
+		<div class="resource" id="resource5">
 			<div class="sisu">
 				<form id="Voting" action="Vote" method="post">	
 		<div id="regioon2" >
@@ -122,11 +123,11 @@
   						<option value="Peeter Python">Peeter Python</option>
   						<option value="John Java">Teemu Perl</option>
   					</select></div>	
-				<input  id="otsus1" type="button" id="voter" value="Kinnita valik" onclick="confirmVote()">
+				<input   type="button" id="voter" value="Kinnita valik" onclick="confirmVote()">
 			</form>
 			</div>
-		</div><hr>
-		<div class="tulemusedKaardil" id="tulemusedKaardil">
+		</div>
+		<div class="resource" id="resource6">
 			<div class="sisu">
 				<div id=googleMap>
 				</div>

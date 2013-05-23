@@ -23,7 +23,7 @@
 		<delete dir="${reports.dir}"/>
 	</target>
 	    <target name="start-selenium-server">
-	        <java fork='true' jar="${lib.dir}/selenium-server.jar"/>
+	        <java fork='true' jar="${lib.dir}/selenium-server-standalone-2.33.0.jar"/>
 	    </target>
 	    <target name="setClassPath" unless="test.classpath">
 	        <path id="classpath_jars">

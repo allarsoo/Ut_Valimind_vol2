@@ -135,7 +135,7 @@ mapTypeId: google.maps.MapTypeId.ROADMAP
 });
  
 var infowindow = new google.maps.InfoWindow({
-	maxWidth: 500,
+	maxWidth: 500
 });
  
 var marker, i;
@@ -155,7 +155,7 @@ infowindow.setContent("Valimisringkonnas <b>" + locations[i][0] +
 		hääli[i][2] + "-protsendilise valimisaktiivsuse.");
 infowindow.open(map, marker);
 }
-})(marker, i));
+});(marker, i));
 }
 }
 /* 
