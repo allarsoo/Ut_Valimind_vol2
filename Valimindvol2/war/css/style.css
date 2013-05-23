@@ -139,6 +139,9 @@ footer{
 	text-align:center;
 	top: 80%;	
 }
+
+footer > p{pading 10px;}
+
 #otsus3 {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
 	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
@@ -187,5 +190,3 @@ footer{
 	top: 50%;
  
 }
-	
-footer > p{pading 10px;}
