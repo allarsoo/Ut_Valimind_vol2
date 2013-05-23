@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" verbose="1" name="suite1" annotations="JDK">
+    <test name="Some Test" junit="false">
+        <groups>
+            <run>
+                <include name="some"/>
+            </run>	 
+        </groups>
+
+        <classes>
+            <class name="ee.ut.valimindvol2.tests.ValimindTest.class"/>
+        </classes>
+    </test>
+</suite> 

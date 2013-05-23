@@ -125,7 +125,7 @@ function initialize()
 
 var j;
 for (j = 0; j < abbr.length; j++) {
-	loadJSON("/statisticbyregion", leader_callback);
+	loadJSON("/statisticbyregion", votes_callback);
 }
 
 var map = new google.maps.Map(document.getElementById('googleMap'), {
@@ -171,37 +171,37 @@ function KontrolliSisend()
 	var lisa = true
 	var error1 = false
 	var error2 = false
-	if (document.getElementById("eesnimi").value.length<3) {
+	if (document.getElementById("eesnimi1").value.length<3) {
 			document.getElementById("nimiviga").innerHTML="Nimi peab olema v2hemalt 3 t2hte pikk";
-			document.getElementById("eesnimi").style.backgroundColor="#FF6666";
+			document.getElementById("eesnimi1").style.backgroundColor="#FF6666";
 			lisa = false
 			error1 = true
-		} if ( document.getElementById("perenimi").value.length<3) {
+		} if ( document.getElementById("perenimi1").value.length<3) {
 			document.getElementById("perenimiviga").innerHTML="Nimi peab olema v2hemalt 3 t2hte pikk";
-			document.getElementById("perenimi").style.backgroundColor="#FF6666";
+			document.getElementById("perenimi1").style.backgroundColor="#FF6666";
 			lisa = false
 			error2 = true
 		} if (!error1){
 			document.getElementById("nimiviga").innerHTML="";
-			document.getElementById("eesnimi").style.backgroundColor="white";
+			document.getElementById("eesnimi1").style.backgroundColor="white";
 		} if (!error2){
 			document.getElementById("perenimiviga").innerHTML="";
-			document.getElementById("perenimi").style.backgroundColor="white";
+			document.getElementById("perenimi1").style.backgroundColor="white";
 		} if (checkdate(document.getElementById("Bday"))){
 			document.getElementById("kuuviga").innerHTML="";
 			document.getElementById("Bday").style.backgroundColor="white";
 		} if (checkdate(document.getElementById("Bday")) == true && lisa == true) {
 		alert('Väljad on korras, lisan kandidaadiks');
-		document.getElementById("eesnimi").style.backgroundColor="white";
-		document.getElementById("perenimi").style.backgroundColor="white";
+		document.getElementById("eesnimi1").style.backgroundColor="white";
+		document.getElementById("perenimi1").style.backgroundColor="white";
 		document.getElementById("Bday").style.backgroundColor="white";
 		proceed=true;
 	}
 	if(proceed==true){
-		var value1=document.getElementById("eesnimi");
-		var value2=document.getElementById("perenimi");
-		var value4=document.getElementById("regioon");
-		var value5=document.getElementById("partei");
+		var value1=document.getElementById("eesnimi1");
+		var value2=document.getElementById("perenimi1");
+		var value4=document.getElementById("regioon1");
+		var value5=document.getElementById("partei1");
 		$.post("/addascandidate",$("#Lisa").serialize());
 		alert("Teie kanditatuur on edukalt lisatud");
 	}

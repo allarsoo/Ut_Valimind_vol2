@@ -1,0 +1,76 @@
+<project name="ValimindVol2" default="clean" basedir=".">
+
+	<property name="build.dir" value="${basedir}/build"/>
+	<property name="lib.dir" value="${basedir}/libs"/>
+	<property name="test.dir" value="${basedir}/tests"/>
+	<property name="reports.tests" value="${basedir}/reports"/>
+	
+	<path id="test.classpath">
+	  <pathelement location="${build.dir}" />
+	  <pathelement location="${lib.dir}/junit.jar" />
+	  <fileset dir="${lib.dir}">
+	    <include name="**/*.jar"/>
+	  </fileset>
+	</path>
+
+	<target name="loadTestNG" depends="setClassPath">
+		<taskdef resource="testngtasks" classpath="${test.classpath}"/>
+	</target>
+
+	<target name="clean">
+		<echo message="Del build dir"/>
+		<delete dir="${build.dir}"/>
+		<delete dir="${reports.dir}"/>
+	</target>
+	    <target name="start-selenium-server">
+	        <java fork='true' jar="${lib.dir}/selenium-server.jar"/>
+	    </target>
+	    <target name="setClassPath" unless="test.classpath">
+	        <path id="classpath_jars">
+	            <fileset dir="${lib.dir}" includes="*.jar"/>
+	        </path>
+	        <pathconvert pathsep=":" 
+	            property="test.classpath" 
+	            refid="classpath_jars"/>
+	    </target>
+	    <target name="init" depends="setClassPath">
+	    </target>
+	    <!-- compile -->
+	    <target name="compile" depends="init, clean" > 
+			<delete includeemptydirs="true" quiet="true">
+	            <fileset dir="${build.dir}" includes="**/*"/>
+			</delete>
+	        <echo message="making directory..."/>
+			<mkdir dir="${build.dir}"/>
+	        <echo message="classpath: ${test.classpath}"/>
+	        <echo message="compiling..."/>
+	        <javac 
+	            debug="true" 
+	            destdir="${build.dir}" 
+	            includes="*.java" 
+	            srcdir="${test.dir}/ee/ut/valimindvol2/tests" 
+	            target="1.7" 
+	            classpath="${test.classpath}"
+	        >
+	        </javac>
+	      </target>
+
+	    <!-- build -->
+	    <target name="build" depends="init">
+	    </target>
+
+	    <!-- run -->
+	    <target name="run" depends="compile">
+	        <testng classpath="${test.classpath}:${build.dir}" suitename="suite1">	
+	            <xmlfileset dir="${basedir}" includes="test.xml"/>
+	        </testng>
+	    </target>
+	<target name="test2" depends="compile"> 
+		<mkdir dir="${reports.tests}"/>
+		<junit printsummary="yes" fork="yes" haltonfailure="yes">
+	    	<test name="ee.ut.valimindvol2.tests.Tests" />
+	    	<formatter type="plain" usefile="false" />
+	    	<classpath refid="test.classpath" />
+	  	</junit>
+	</target>
+</project>

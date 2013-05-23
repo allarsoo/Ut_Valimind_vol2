@@ -32,13 +32,13 @@
 	
 		<div class="kandidaadid" id ="kandidaadid"><!-- Kandidaadid -->
 			<form action="AllCandidates"  method="GET" >
-							<br> <input type="button" value="Kuva kandidaadid" 
+							<br> <input type="button" id="list" value="Kuva kandidaadid" 
 							onclick="drawKandidaadid()" />
 			</form>	
 			<form action="FindByName" method="get">
 				<input id="eesnimi" name="eesnimi" type="text" value="Eesnimi">	
 				<input id="perenimi" name="perenimi" type="text" value="Perenimi">
-				<input id="otsus3" type="submit"  value="Otsi">
+				<input id="otsus3" id="byName" type="submit"  value="Otsi">
 	</form>
 	<form action="FindByParty" method="get">
 			<input id="partei" name="partei" type="text" value="partei">
@@ -70,7 +70,7 @@
 			
 		
 			<form action="StatisticByCountry" method="get">
-				<input id="otsus" type="button" onclick="drawStatisticByCountry()" value="Kuva tulemused"/>
+				<input id="otsus" type="button" id="n2ita" onclick="drawStatisticByCountry()" value="Kuva tulemused"/>
 			</form>
 		
 			<div id="table_div1">
@@ -82,47 +82,47 @@
 				<form id="Lisa" action ="AddAsCandidate" method="post">
  				<fieldset>
   			<legend>Kandidatuuri esitamine</legend>
-  			Eesnimi: <input id="eesnimi" name="eesnimi" type="text"><br><p id="nimiviga"></p>
-  			Perenimi: <input id="perenimi" name="perenimi" type="text"><br><p id="perenimiviga"></p>
+  			Eesnimi: <input id="eesnimi1" name="eesnimi" type="text"><br><p id="nimiviga"></p>
+  			Perenimi: <input id="perenimi1" name="perenimi" type="text"><br><p id="perenimiviga"></p>
   			Sünnikuupäev: <input id="Bday" name="Bday" type="text"><br><p id="kuuviga"></p> 
-  			Piirkond: <select id="regioon" name="regioon">
+  			Piirkond: <select id="regioon1" name="regioon">
   				<option value="Tartumaa">Tartumaa</option>
   				<option value="Harjumaa">Harjumaa</option>
   				<option value="Valgamaa">Valgamaa</option>
   			</select>
-  			Erakond: <select id="partei" name="partei">
+  			Erakond: <select id="partei1" name="partei">
   				<option value="IRL">IRL</option>
   				<option value="Reformierakond">Reformierakond</option>
   				<option value="Üksikandidaat">Üksikkandidaat</option>
   				</select>  		
  				</fieldset>
-				<input type="button" value="Kandideeri" onclick="KontrolliSisend()"/>
+				<input type="button" id="kandi" value="Kandideeri" onclick="KontrolliSisend()"/>
 			</form>
 			</div>
 		</div><hr>
 		<div class="hööleta" id="hääleta">
 			<div class="sisu">
 				<form id="Voting" action="Vote" method="post">	
-		<div id="regioon" >
-			<select name="regioon">
+		<div id="regioon2" >
+			<select name="regioon2">
   					<option value="Põlvamaa">Tartumaa</option>
   					<!--option value="Harjumaa">Harjumaa</option>
   					<option value="Valgamaa">Valgamaa</option-->
   			</select>
   			</div>
-			<div id="partei"></div>
-				<select name="partei">
+			<div id="partei2"></div>
+				<select name="partei2">
   						<option value="IRL">IRL</option>
   						<option value="Reformierakond">Reformierakond</option>
   						<option value="Keskerakond">Keskerakond</option>
   				</select>
-				<div id="kandidaat">
-					<select name="kandidaat">
+				<div id="kandidaat2">
+					<select name="kandidaat2">
   						<option value="Teemu Perl">Teemu Perl</option>
   						<option value="Peeter Python">Peeter Python</option>
   						<option value="John Java">Teemu Perl</option>
   					</select></div>	
-				<input  id="otsus1" type="button" value="Kinnita valik" onclick="confirmVote()">
+				<input  id="otsus1" type="button" id="voter" value="Kinnita valik" onclick="confirmVote()">
 			</form>
 			</div>
 		</div><hr>

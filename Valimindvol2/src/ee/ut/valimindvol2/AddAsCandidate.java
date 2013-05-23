@@ -23,10 +23,10 @@ public class AddAsCandidate extends HttpServlet  {
 		Connection con = null;
 		String lausend = null;
 		PreparedStatement ps = null;
-		String eesnimi=req.getParameter("eesnimi");
-		String perenimi=req.getParameter("perenimi");
-		String partei=req.getParameter("partei");
-		String regioon=req.getParameter("regioon");
+		String eesnimi=req.getParameter("eesnimi1");
+		String perenimi=req.getParameter("perenimi1");
+		String partei=req.getParameter("partei1");
+		String regioon=req.getParameter("regioon1");
 		if(eesnimi.length()>0 && perenimi.length()>0 && partei.length()>0 && regioon.length()>0){
 		try{
 			DriverManager.registerDriver(new AppEngineDriver());

@@ -24,12 +24,12 @@ public class Vote extends HttpServlet {
 		String lausend1 = null;
 		PreparedStatement ps = null;
 		PreparedStatement ps1 = null;
-		String kandidaat=req.getParameter("kandidaat");
+		String kandidaat=req.getParameter("kandidaat2");
 		String tokens []=kandidaat.split(" ");
 		String eesnimi=tokens[0];
 		String perenimi=tokens[1];
-		String partei=req.getParameter("partei");
-		String regioon=req.getParameter("regioon");
+		String partei=req.getParameter("partei2");
+		String regioon=req.getParameter("regioon2");
 		if(eesnimi.length()>0 && perenimi.length()>0 && partei.length()>0 && regioon.length()>0){
 		try{
 			DriverManager.registerDriver(new AppEngineDriver());
