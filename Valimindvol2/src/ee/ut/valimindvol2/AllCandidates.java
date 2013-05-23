@@ -12,6 +12,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.appengine.api.channel.ChannelService;
+import com.google.appengine.api.channel.ChannelServiceFactory;
+import javax.jdo.PersistenceManager;
+import java.util.Random;
 
 @SuppressWarnings("serial")
 public class AllCandidates extends HttpServlet {
@@ -30,6 +34,7 @@ public class AllCandidates extends HttpServlet {
 		PreparedStatement ps = null;
 		Gson gson=new Gson();
 		ArrayList<FullList> allCand=new ArrayList<FullList>();
+		ChannelService channelService = ChannelServiceFactory.getChannelService();
 		try{
 			DriverManager.registerDriver(new AppEngineDriver());
 			con = DriverManager.getConnection("jdbc:google:rdbms://valmindbyut:valimindbyut/evalimised");

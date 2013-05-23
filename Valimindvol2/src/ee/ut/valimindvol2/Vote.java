@@ -24,8 +24,10 @@ public class Vote extends HttpServlet {
 		String lausend1 = null;
 		PreparedStatement ps = null;
 		PreparedStatement ps1 = null;
-		String eesnimi=req.getParameter("eesnimi");
-		String perenimi=req.getParameter("perenimi");
+		String kandidaat=req.getParameter("kandidaat");
+		String tokens []=kandidaat.split(" ");
+		String eesnimi=tokens[0];
+		String perenimi=tokens[1];
 		String partei=req.getParameter("partei");
 		String regioon=req.getParameter("regioon");
 		if(eesnimi.length()>0 && perenimi.length()>0 && partei.length()>0 && regioon.length()>0){

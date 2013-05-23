@@ -31,7 +31,7 @@
 		      // login status of the person. In this case, we're handling the situation where they 
 		      // have logged in to the app.
 		      testAPI();
-		      window.location="kasutamind.html"
+		      window.open("kasutamind.html", _self);
 		    } else if (response.status === 'not_authorized') {
 		      // In this case, the person is logged into Facebook, but not into the app, so we call
 		      // FB.login() to prompt them to do so. 
@@ -41,7 +41,7 @@
 		      // result from direct interaction from people using the app (such as a mouse click)
 		      // (2) it is a bad experience to be continually prompted to login upon page load.
 		      FB.login();
-		      window.location="kasutamind.html"
+		      window.open("kasutamind.html", _self);
 		    } else {
 		      // In this case, the person is not logged into Facebook, so we call the login() 
 		      // function to prompt them to do so. Note that at this stage there is no indication
@@ -49,7 +49,8 @@
 		      // dialog right after they log in to Facebook. 
 		      // The same caveats as above apply to the FB.login() call here.
 		      FB.login();
-		      window.location="kasutmind.html"
+		      window.open("kasutmind.html", _self);
+		      
 		    }
 		  });
 		  };
@@ -59,7 +60,7 @@
 		   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 		   if (d.getElementById(id)) {return;}
 		   js = d.createElement('script'); js.id = id; js.async = true;
-		   js.src = "http://connect.facebook.net/en_US/all.js";
+		   js.src = "//connect.facebook.net/en_US/all.js";
 		   ref.parentNode.insertBefore(js, ref);
 		  }(document));
 
@@ -82,7 +83,7 @@
 			<li class="statistika"><a name="resource" id="resource3" href="#">Statistika</a></li>
 			<li class="tulemused"><a name="resource" id="resource4" href="#">Tulemused</a></li>
 			<li class="tulemusedKaardil"><a name="resource" id="resource5" href="#Kaardil">TulemusedKaardil</a></li>
-			<li class="logi_sisse"><a href="kasutamind.html"></a><fb:login-button autologoutlink="true" onlogin="OnRequestPermission();"></fb:login-button></li>	
+			<li class="logi_sisse"><fb:login-button autologoutlink="true" onlogin="OnRequestPermission();"></fb:login-button></li>
 		</ul>	
 	</nav>
 		
@@ -93,41 +94,54 @@
 			<p>Tere tulemast poliitikahuviline. Olete sattunud 2013. aasta e-valimiste lehele. Siin saate te oma kodanikukohust täita.</p>
 		</div><hr>
 	
-		<div class="resource" id ="resource2"><!-- Tulemused -->
-			<div id="table_div">
+		<div class="resource" id ="resource2"><!-- Kandidaadid -->
 			<form action="AllCandidates"  method="GET" >
 							<br> <input type="button" value="Kuva kandidaadid" 
-							onclick=drawTable() />
+							onclick="drawKandidaadid()" />
 			</form>	
+			<form action="FindByName" method="get">
+				<input id="eesnimi" name="eesnimi" type="text" value="Eesnimi">	
+				<input id="perenimi" name="perenimi" type="text" value="Perenimi">
+				<input id="otsus3" type="submit"  value="Otsi">
+	</form>
+	<form action="FindByParty" method="get">
+			<input id="partei" name="partei" type="text" value="partei">
+			<input id="otsus3" type="submit" value="Otsi">
+	</form>
+			<div id="table_div">
+			
 			</div><!-- erakonnad -->
-				
 		</div><hr>
 	
-		<div class="resource" id="resource3"><!-- Kandidaadid -->
+		<div class="resource" id="resource3"><!-- Stat -->
 			<div class="sisu">
-			<select id="tabelmenu" onchange="valitabel()">
-  				<option value="pie">Koguriigis</option>
-  				<option value="bar">Piirkonniti</option>
-  				<option value="chart">Erakonniti</option>
-  			</select>
+			<form action="StatisticByParty" method="get">
+				<br><input type="button" value="Kuva parteide lõikes" onclick="drawStatisticByParty()">
+			</form>
+			<form action="StatisticByRegion" method="get">
+				<br><input type="button" value="Kuva regiooniti" onclick="drawStatisticByregion()">
+			</form>
+			<div id="table_div2">
+			</div>
+			<div id="table_div3"> 
+			</div>
 		</div>
 		</div><hr>
 	
 		<div class="resource" id="resource4"><!-- Tulemused -->
 		
 			<div class="sisu">
-				<img src="img/kontuurkaart.jpg" width=50%/>
-			</div>
+			
 		
 			<form action="StatisticByCountry" method="get">
-				<input id="otsus" type="button" onclick=drawTulemused() value="Kuva tulemused"/>
+				<input id="otsus" type="button" onclick="drawStatisticByCountry()" value="Kuva tulemused"/>
 			</form>
 		
-			<div id="table_div">
-		
+			<div id="table_div1">
+			</div>		
 			</div>
 		</div><hr>
-		<div class="resource" id="resource5">
+		<div class="resource" id="resource5"> <!--  Google Map here -->
 			<div class="sisu">
 				<div id=googleMap>
 				</div>
